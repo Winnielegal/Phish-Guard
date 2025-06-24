@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Phish Guard - Phishing Detector</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Phish Guard</h1>
+    <p class="subtitle">Detect and prevent phishing threats with certainty</p>
+  </header>
+  <main>
+    <section class="detector-section">
+      <h2>Phishing Analysis</h2>
+      <form id="phish-form" autocomplete="off">
+        <div class="input-group">
+          <label for="url">URL</label>
+          <input type="text" id="url" placeholder="https://example.com">
+          <button type="button" class="analyze-btn" onclick="analyzeURL()">Analyze URL</button>
+        </div>
+        <div class="input-group">
+          <label for="headers">Email Headers</label>
+          <textarea id="headers" rows="3" placeholder="Paste email headers here..."></textarea>
+          <button type="button" class="analyze-btn" onclick="analyzeHeaders()">Analyze Headers</button>
+        </div>
+        <div class="input-group">
+          <label for="content">Email Content</label>
+          <textarea id="content" rows="3" placeholder="Paste email content here..."></textarea>
+          <button type="button" class="analyze-btn" onclick="analyzeContent()">Analyze Content</button>
+        </div>
+      </form>
+    </section>
+    <section id="results" class="results-section">
+      <h2>Results</h2>
+      <div id="output"></div>
+    </section>
+  </main>
+  <footer>
+    <span>© 2025 Phish Guard. All rights reserved.</span>
+  </footer>
+  <script src="phishguard.js"></script>
+</body>
+</html>
